@@ -19,7 +19,7 @@ namespace ISAD251Assignment.Controllers
 
             return View();
         }
-        //[Authorize]
+        [Authorize]
         public ActionResult Order()
         {
             ViewBag.Message = "Your Order page.";
