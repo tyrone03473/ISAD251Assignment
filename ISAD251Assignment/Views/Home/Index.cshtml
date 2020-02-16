@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div class="jumbotron">
+        <h1>ISAD251 Cafe</h1>
+        <p class="lead">ISAD251 Cafe is a western-style cafe.</p>
+        <h6><span></span> @Html.ActionLink("Cafe Information", "Contact", new { }, new { @class = "btn btn-primary btn-lg" }) </h6>
+    </div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting your first coffee</h2>
+        <img src="~/Image/coffee.jpg" style="width: 360px; height:250px" alt="Coffee" />
+        <p>
+            Coffee is a highly popular beverage around the globe that boasts a
+            number of impressive health benefits
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Discover our taste</h2>
+        <img src="~/Image/food.jpg" style="width: 360px; height:250px" alt="Food" />
+        <p>We strive to give you the best food and so our taste guarantee is here for your peace of mind!.</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Goodness to go</h2>
+        <img src="~/Image/delivery.jpg" style="width: 360px; height:250px" alt="Delivery" />
+        <p>
+            On the run? Skip the line and pick up your meal at our restaurant, or place an order for delivery 
+        </p>
+    </div>
+</div>

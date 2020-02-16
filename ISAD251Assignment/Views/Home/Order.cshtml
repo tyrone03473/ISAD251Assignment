@@ -1,0 +1,129 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    IList<ISAD251Assignment.Models.Stock.TempProducts> productList =
+        new List<ISAD251Assignment.Models.Stock.TempProducts>();
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 1,
+        Name = "HOT CHOCOLATE",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 2,
+        Name = "ICED LATTE",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 3,
+        Name = "LATTE MACCHIATO",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 4,
+        Name = "ESPRESSO MACCCHIATO",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 5,
+        Name = "ICED CARAMELITOA",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 6,
+        Name = "GRANOLA",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 7,
+        Name = "CHICKEN & BACON",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 8,
+        Name = "STEAK & CHEESE",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 9,
+        Name = "TUNA",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 10,
+        Name = "CHICKEN PICCATA",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 11,
+        Name = "SHRIMP PICCATA",
+        Price = 10.0m
+    });
+
+     productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 12,
+        Name = "MEAT LASAGNA",
+        Price = 10.0m
+    });
+
+     productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 13,
+        Name = "CHICKEN PARMIGIANA",
+        Price = 10.0m
+    });
+
+     productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 14,
+        Name = "EGGPLANT PARMIGIANA",
+        Price = 10.0m
+    });
+
+     productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 16,
+        Name = "CAESAR SALAD",
+        Price = 10.0m
+    });
+}
+
+<h2>Menu</h2>
+<table class="table">
+    <thead><tr><td>ID</td><td>Name</td><td>Price</td><td>Order</td><td>Details</td></tr></thead>
+    <tbody>
+        @foreach (var pd in productList)
+        {
+            <tr>
+                <td>@pd.ID</td>
+                <td>@pd.Name</td>
+                <td>@pd.Price</td>
+                <td><span></span> @Html.ActionLink("Add to Cart", "About", new { }, new { @class = "btn btn-primary btn-lg" }) </td>
+                <td><span></span> @Html.ActionLink("Food Detail", "About", new { }, new { @class = "btn btn-primary btn-lg" }) </td>
+            </tr>
+        }
+    </tbody>
+</table>

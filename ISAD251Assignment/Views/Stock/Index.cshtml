@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    IList<ISAD251Assignment.Models.Stock.TempProducts> productList =
+        new List<ISAD251Assignment.Models.Stock.TempProducts>();
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 1,
+        Name = "ABC",
+        Price = 30.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 2,
+        Name = "DEF",
+        Price = 50.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 3,
+        Name = "AAA",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 3,
+        Name = "AAA",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 3,
+        Name = "AAA",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 3,
+        Name = "AAA",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 3,
+        Name = "AAA",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 3,
+        Name = "AAA",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 3,
+        Name = "AAA",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 3,
+        Name = "AAA",
+        Price = 10.0m
+    });
+
+    productList.Add(new ISAD251Assignment.Models.Stock.TempProducts
+    {
+        ID = 3,
+        Name = "AAA",
+        Price = 10.0m
+    });
+}
+
+<h2>Menu</h2>
+<table class="table">
+    <thead><tr><td>ID</td><td>Name</td><td>Price</td></tr></thead>
+    <tbody>
+        @foreach (var pd in productList)
+        {
+            <tr>
+                <td>@pd.ID</td>
+                <td>@pd.Name</td>
+                <td>@pd.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
